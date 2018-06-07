@@ -7,7 +7,11 @@
  * @param {function} c
  */
 
-const solution = (a, b, c) => {
+const solution = (a, b, c = () => console.log('toto')) => {
+  // a *= 1000
+  // b *= 1000
+  setTimeout(c, a)
+  setTimeout(c, a+b)
 };
 
 module.exports = {
