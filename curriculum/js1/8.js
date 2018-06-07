@@ -6,7 +6,9 @@
  */
 
 const solution = (a, b) => {
-  return 0;
+  if (a == b) return a;
+  (a > b) ? a =a-b : b=b-a;
+  return solution(a,b)
 };
 
 module.exports = {
