@@ -7,7 +7,7 @@
  */
 
 const solution = (a, b) => {
-  return 0;
+  return a.filter(number => b === number).length;
 };
 
 module.exports = {
