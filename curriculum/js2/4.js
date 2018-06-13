@@ -3,9 +3,10 @@
  * @param {array} a
  * @returns {number}
  */
-
+const add = (sum, n) => sum + n;
 const solution = (a) => {
-  return 0;
+  if (a.length < 1) return '';
+  return a.reduce(add);
 };
 
 module.exports = {
