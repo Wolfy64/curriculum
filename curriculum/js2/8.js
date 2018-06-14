@@ -4,9 +4,13 @@
  */
 
 const solution = () => {
-  Array.prototype.gsMap = function () {
+  Array.prototype.gsMap = function (func) {
     // To get the actual array, use this
-    return [];
+    const arr = [];
+    this.forEach(e => {
+      arr.push(func(e));
+    })
+    return arr;
   };
 };
 
