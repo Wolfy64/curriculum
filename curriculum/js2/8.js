@@ -4,13 +4,12 @@
  */
 
 const solution = () => {
-  Array.prototype.gsMap = function (func) {
+  Array.prototype.gsMap = function (func, i=0, arr=[] ) {
     // To get the actual array, use this
-    const arr = [];
-    this.forEach(e => {
-      arr.push(func(e));
-    })
-    return arr;
+    if (this.length === i) return arr;
+    arr.push(func(this[i]));
+  
+    return this.gsMap(func, i+1, arr);
   };
 };
 
