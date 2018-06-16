@@ -4,11 +4,10 @@
  * @returns {number} max
  */
 
-const solution = (obj)=>{
-  return 0;
-}
+const solution = obj => {
+  return Math.max( ...Object.values(obj) )
+};
 
 module.exports = {
   solution
-}
-
+};
