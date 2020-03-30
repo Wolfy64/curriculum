@@ -24,21 +24,11 @@ const solution = (obj, num, i = 0, isWaiting = false) => {
   const keys = Object.keys(obj);
   const key = keys[i];
   if (i === keys.length) return;
-  // if(!isWaiting){
-  //   obj[key](key);
-  //   isWaiting = true;
-  //   setTimeout(() => {
-  //     isWaiting = false;
-  //     return solution(obj, num, i + 1, isWaiting);
-  //   }, num);
-  // }
 
   if(!isWaiting){
     obj[key](key);
     isWaiting = true;
   }
-
-
 
   setTimeout(() => {
     isWaiting = false;
